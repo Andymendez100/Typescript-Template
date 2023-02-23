@@ -17,6 +17,7 @@ module.exports = {
     'global-require': 0,
     'import/no-extraneous-dependencies': 'off',
     'import/no-import-module-exports': 'off',
+    '@typescript-eslint/no-explicit-any': 'error',
   },
   ignorePatterns: ['.eslintrc.js'],
 };

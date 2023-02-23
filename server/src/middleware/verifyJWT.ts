@@ -1,3 +1,4 @@
+import { DecodedToken } from '@root/types/jwtToken/jwtToken';
 import { Request, Response, NextFunction } from 'express';
 
 const jwt = require('jsonwebtoken');
@@ -7,7 +8,7 @@ const verifyJWT = (req: Request, res: Response, next: NextFunction) => {
   if (!authHeader?.startsWith('Bearer ')) return res.sendStatus(401);
   const token = authHeader.split(' ')[1];
   try {
-    const decoded = jwt.verify(token, process.env.ACCESS_TOKEN_SECRET);
+    const decoded = jwt.verify(token, process.env.ACCESS_TOKEN_SECRET) as DecodedToken;
     req.user = decoded.UserInfo.username;
     return next();
   } catch (error) {
