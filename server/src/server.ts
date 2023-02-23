@@ -6,6 +6,7 @@ require('dotenv').config();
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const path = require('path');
+const mongoose = require('mongoose');
 const credentials = require('@middleware/credentials');
 const connectDB = require('./config/dbConn');
 const corsOptions = require('./config/corsOptions');

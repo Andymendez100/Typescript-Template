@@ -47,10 +47,10 @@
     "*.ts": "eslint --fix"
   },
   "_moduleAliases": {
-    "@root": ".",
-    "@utils": "utils",
-    "@controllers": "controllers",
-    "@model": "model",
-    "@middleware": "middleware"
+    "@root": "dist",
+    "@utils": "dist/utils",
+    "@controllers": "dist/controllers",
+    "@model": "dist/model",
+    "@middleware": "dist/middleware"
   }
 }
