@@ -1,5 +1,5 @@
 module.exports = {
-  root: true,
+  root: false,
   env: {
     commonjs: true,
     es2021: true,
@@ -9,10 +9,14 @@ module.exports = {
   overrides: [],
   parserOptions: {
     ecmaVersion: 'latest',
-    // project: 'tsconfig.json',
+    project: 'tsconfig.json',
+    // project: './tsconfig.eslint.json',
     tsconfigRootDir: __dirname,
   },
   rules: {
     'global-require': 0,
+    'import/no-extraneous-dependencies': 'off',
+    'import/no-import-module-exports': 'off',
   },
+  ignorePatterns: ['.eslintrc.js'],
 };

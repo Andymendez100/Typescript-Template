@@ -9,4 +9,5 @@ coverage/*
 # data definition files
 **/*.d.ts
 
-.eslintrc.js
+# .eslintrc.js
+# **/*.js
