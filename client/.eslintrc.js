@@ -1,31 +1,31 @@
-{
-  "env": {
-    "browser": true,
-    "es2021": true
+module.export = {
+  env: {
+    browser: true,
+    es2021: true,
   },
-  "extends": [
+  extends: [
     "plugin:react/recommended",
     "airbnb",
     "prettier",
-    "airbnb-typescript"
+    "airbnb-typescript",
   ],
-  "parserOptions": {
-    "parser": "@typescript-eslint/parser",
-    "ecmaFeatures": {
-      "jsx": true
+  parserOptions: {
+    parser: "@typescript-eslint/parser",
+    ecmaFeatures: {
+      jsx: true,
     },
-    "ecmaVersion": 12,
-    "sourceType": "module",
-    "project": "./tsconfig.json"
+    ecmaVersion: 12,
+    sourceType: "module",
+    project: "./tsconfig.json",
   },
-  "plugins": ["react", "react-hooks", "eslint-plugin-no-inline-styles"],
-  "rules": {
+  plugins: ["react", "react-hooks", "eslint-plugin-no-inline-styles"],
+  rules: {
     "react/function-component-definition": [
       2,
       {
-        "namedComponents": "arrow-function",
-        "unnamedComponents": "arrow-function"
-      }
+        namedComponents: "arrow-function",
+        unnamedComponents: "arrow-function",
+      },
     ],
     "arrow-body-style": 0,
     "react/prop-types": 0,
@@ -41,13 +41,13 @@
     "no-restricted-exports": [
       "error",
       {
-        "restrictedNamedExports": ["then"]
-      }
+        restrictedNamedExports: ["then"],
+      },
     ],
     "react/destructuring-assignment": "off",
     "react/require-default-props": "off",
     "@typescript-eslint/indent": "off",
-    "@typescript-eslint/no-unused-vars": "warn"
+    "@typescript-eslint/no-unused-vars": "warn",
   },
-  "ignorePatterns": [".eslintrc.js"]
-}
+  ignorePatterns: [".eslintrc.js"],
+};
